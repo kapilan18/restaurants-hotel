@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Koodoo Family Restaurant</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-utensils"></i> Koodoo Restaurant
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reservations.html">Reservations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="display-4 fw-bold text-white">Our Menu</h1>
+            <p class="lead text-white">Discover Our Delicious Selection</p>
+        </div>
+    </section>
+
+    <!-- Menu Content -->
+    <section class="py-5">
+        <div class="container">
+            <!-- Menu Filter -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div class="btn-group w-100 flex-wrap" role="group">
+                        <input type="radio" class="btn-check" name="category" id="all" value="all" checked>
+                        <label class="btn btn-outline-danger" for="all">All Items</label>
+
+                        <input type="radio" class="btn-check" name="category" id="biryani" value="biryani">
+                        <label class="btn btn-outline-danger" for="biryani">Biryani</label>
+
+                        <input type="radio" class="btn-check" name="category" id="tandoori" value="tandoori">
+                        <label class="btn btn-outline-danger" for="tandoori">Tandoori</label>
+
+                        <input type="radio" class="btn-check" name="category" id="bbq" value="bbq">
+                        <label class="btn btn-outline-danger" for="bbq">BBQ</label>
+
+                        <input type="radio" class="btn-check" name="category" id="appetizers" value="appetizers">
+                        <label class="btn btn-outline-danger" for="appetizers">Appetizers</label>
+
+                        <input type="radio" class="btn-check" name="category" id="desserts" value="desserts">
+                        <label class="btn btn-outline-danger" for="desserts">Desserts</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Biryani Section -->
+            <div class="menu-category" data-category="biryani">
+                <h2 class="mb-4"><i class="fas fa-bowl-rice text-danger me-2"></i>Biryani Specialties</h2>
+                <div class="row mb-5">
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100 menu-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Mutton Biryani</h5>
+                                <p class="card-text text-muted">Fragrant rice cooked with tender mutton, aromatic spices, and herbs</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-danger">₹280</span>
+                                    <button class="btn btn-sm btn-danger" onclick="addToCart('Mutton Biryani', 280)">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100 menu-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Chicken Biryani</h5>
+                                <p class="card-text text-muted">Succulent chicken with fragrant basmati rice and traditional spices</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-danger">₹240</span>
+                                    <button class="btn btn-sm btn-danger" onclick="addToCart('Chicken Biryani', 240)">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100 menu-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Vegetarian Biryani</h5>
+                                <p class="card-text text-muted">Mixed vegetables with aromatic rice and mild spices</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-danger">₹180</span>
+                                    <button class="btn btn-sm btn-danger" onclick="addToCart('Vegetarian Biryani', 180)">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tandoori Section -->
+            <div class="menu-category" data-category="tandoori">
+                <h2 class="mb-4"><i class="fas fa-drumstick-bite text-danger me-2"></i>Tandoori Delights</h2>
+                <div class="row mb-5">
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100 menu-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Tandoori Chicken</h5>
+                                <p class="card-text text-muted">Marinated in yogurt and spices, roasted in traditional clay oven</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-danger">₹280</span>
+                                    <button class="btn btn-sm btn-danger" onclick="addToCart('Tandoori Chicken', 280)">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100 menu-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Tandoori Prawns</h5>
+                                <p class="card-text text-muted">Fresh prawns marinated and grilled to perfection</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-danger">₹350</span>
+                                    <button class="btn btn-sm btn-danger" onclick="addToCart('Tandoori Prawns', 350)">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100 menu-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Paneer Tikka</h5>
+                                <p class="card-text text-muted">Cottage cheese cubes roasted with vegetables in tandoor</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-danger">₹220</span>
+                                    <button class="btn btn-sm btn-danger" onclick="addToCart('Paneer Tikka', 220)">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BBQ Section -->
+            <div class="menu-category" data-category="bbq">
+                <h2 class="mb-4"><i class="fas fa-fire text-danger me-2"></i>BBQ Specials</h2>
+                <div class="row mb-5">
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100 menu-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Egyptian BBQ</h5>
+                                <p class="card-text text-muted">Unique specialty blend with Egyptian spices - Our signature dish!</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-danger">₹320</span>
+                                    <button class="btn btn-sm btn-danger" onclick="addToCart('Egyptian BBQ', 320)">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100 menu-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Grilled Kebab</h5>
+                                <p class="card-text text-muted">Minced meat kebabs with herbs and spices, grilled to juicy perfection</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-danger">₹250</span>
+                                    <button class="btn btn-sm btn-danger" onclick="addToCart('Grilled Kebab', 250)">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100 menu-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Fish BBQ</h5>
+                                <p class="card-text text-muted">Fresh fish steaks marinated and grilled with aromatic spices</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-danger">₹300</span>
+                                    <button class="btn btn-sm btn-danger" onclick="addToCart('Fish BBQ', 300)">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Appetizers Section -->
+            <div class="menu-category" data-category="appetizers">
+                <h2 class="mb-4"><i class="fas fa-leaf text-danger me-2"></i>Appetizers</h2>
+                <div class="row mb-5">
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100 menu-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Chicken Soup</h5>
+                                <p class="card-text text-muted">Aromatic chicken broth with herbs and spices</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-danger">₹120</span>
+                                    <button class="btn btn-sm btn-danger" onclick="addToCart('Chicken Soup', 120)">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100 menu-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Samosa (4 pcs)</h5>
+                                <p class="card-text text-muted">Crispy fried pastry with spiced potato and peas filling</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-danger">₹80</span>
+                                    <button class="btn btn-sm btn-danger" onclick="addToCart('Samosa (4 pcs)', 80)">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100 menu-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Cheese Garlic Bread</h5>
+                                <p class="card-text text-muted">Toasted bread with melted cheese and garlic</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-danger">₹140</span>
+                                    <button class="btn btn-sm btn-danger" onclick="addToCart('Cheese Garlic Bread', 140)">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts Section -->
+            <div class="menu-category" data-category="desserts">
+                <h2 class="mb-4"><i class="fas fa-ice-cream text-danger me-2"></i>Desserts & Beverages</h2>
+                <div class="row mb-5">
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100 menu-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Kunafa Ice Cream</h5>
+                                <p class="card-text text-muted">Sweet crispy kunafa with creamy ice cream - Perfect finish!</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-danger">₹160</span>
+                                    <button class="btn btn-sm btn-danger" onclick="addToCart('Kunafa Ice Cream', 160)">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100 menu-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Falooda</h5>
+                                <p class="card-text text-muted">Traditional layered dessert with noodles, ice cream, and rabri</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-danger">₹140</span>
+                                    <button class="btn btn-sm btn-danger" onclick="addToCart('Falooda', 140)">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100 menu-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Fresh Juice</h5>
+                                <p class="card-text text-muted">Fresh fruit juices - Orange, Mango, or Mixed</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-danger">₹80</span>
+                                    <button class="btn btn-sm btn-danger" onclick="addToCart('Fresh Juice', 80)">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 bg-danger text-white">
+        <div class="container text-center">
+            <h2 class="mb-4">Ready to Order?</h2>
+            <p class="lead mb-4">Place your order online for delivery, pickup, or dine-in</p>
+            <a href="reservations.html" class="btn btn-light btn-lg">Order Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <h5>Koodoo Restaurant</h5>
+                    <p>Serving authentic flavors</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="menu.html" class="text-decoration-none text-light">Menu</a></li>
+                        <li><a href="about.html" class="text-decoration-none text-light">About</a></li>
+                        <li><a href="contact.html" class="text-decoration-none text-light">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Follow Us</h5>
+                    <div>
+                        <a href="#" class="text-decoration-none text-light me-3"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="text-decoration-none text-light me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-decoration-none text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h5>Hours</h5>
+                    <p>Daily: 10:00 AM - 10:30 PM</p>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2024 Koodoo Family Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3 class="mb-0">🛒 Your Order</h3>
+            <button class="cart-close-btn" onclick="toggleCart()">×</button>
+        </div>
+        <div class="cart-items-container" id="cartItemsList">
+            <div class="cart-empty">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+                <small>Add items to get started</small>
+            </div>
+        </div>
+        <div class="cart-summary">
+            <div class="summary-row">
+                <span>Subtotal:</span>
+                <span id="cartSubtotal">₹0</span>
+            </div>
+            <div class="summary-row">
+                <span>Delivery:</span>
+                <span id="cartDelivery">₹50</span>
+            </div>
+            <div class="summary-row total">
+                <span>Total:</span>
+                <span id="cartTotal">₹0</span>
+            </div>
+            <button class="checkout-btn" onclick="openCheckout()" id="checkoutBtnCart">
+                Proceed to Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+    <!-- Cart Toggle Button -->
+    <button class="cart-toggle-btn" onclick="toggleCart()" id="cartToggleBtn">
+        🛒
+        <span class="cart-badge" id="cartBadge" style="display: none;">0</span>
+    </button>
+
+    <!-- Checkout Modal -->
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="checkout-content">
+            <button class="checkout-close" onclick="closeCheckout()">×</button>
+            <div class="checkout-header">
+                <h2>Complete Your Order</h2>
+            </div>
+            <form id="checkoutForm" class="checkout-body" onsubmit="submitCheckout(event)">
+                <div class="form-group-checkout">
+                    <label>Full Name *</label>
+                    <input type="text" id="checkoutName" required>
+                </div>
+                <div class="form-group-checkout">
+                    <label>Email Address *</label>
+                    <input type="email" id="checkoutEmail" required>
+                </div>
+                <div class="form-group-checkout">
+                    <label>Phone Number *</label>
+                    <input type="tel" id="checkoutPhone" placeholder="+91" required>
+                </div>
+                <div class="form-group-checkout">
+                    <label>Order Type *</label>
+                    <select id="checkoutOrderType" onchange="toggleDeliveryAddress()" required>
+                        <option value="">Select Order Type</option>
+                        <option value="Dine In">Dine In</option>
+                        <option value="Takeaway">Takeaway</option>
+                        <option value="Delivery">Delivery</option>
+                    </select>
+                </div>
+                <div class="form-group-checkout" id="deliveryAddressGroup" style="display: none;">
+                    <label>Delivery Address</label>
+                    <textarea id="checkoutAddress" rows="3" placeholder="Enter your full address"></textarea>
+                </div>
+                <div class="form-group-checkout">
+                    <label>Payment Method *</label>
+                    <div class="payment-methods">
+                        <div class="payment-option">
+                            <input type="radio" id="payment_cod" name="payment" value="Cash on Delivery" checked>
+                            <label for="payment_cod" class="payment-label">
+                                <i class="fas fa-money-bill-wave"></i><br>
+                                Cash on Delivery
+                            </label>
+                        </div>
+                        <div class="payment-option">
+                            <input type="radio" id="payment_upi" name="payment" value="UPI">
+                            <label for="payment_upi" class="payment-label">
+                                <i class="fas fa-mobile-alt"></i><br>
+                                UPI
+                            </label>
+                        </div>
+                        <div class="payment-option">
+                            <input type="radio" id="payment_card" name="payment" value="Debit/Credit Card">
+                            <label for="payment_card" class="payment-label">
+                                <i class="fas fa-credit-card"></i><br>
+                                Card
+                            </label>
+                        </div>
+                        <div class="payment-option">
+                            <input type="radio" id="payment_bank" name="payment" value="Bank Transfer">
+                            <label for="payment_bank" class="payment-label">
+                                <i class="fas fa-university"></i><br>
+                                Bank Transfer
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group-checkout">
+                    <label>Special Requests</label>
+                    <textarea id="checkoutRequests" rows="2" placeholder="Any special requests or dietary restrictions?"></textarea>
+                </div>
+                <button type="submit" class="submit-order-btn">
+                    <i class="fas fa-check-circle me-2"></i>Confirm Order
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3 class="mb-0">🛒 Your Order</h3>
+            <button class="cart-close-btn" onclick="toggleCart()">×</button>
+        </div>
+        <div class="cart-items-container" id="cartItemsList">
+            <div class="cart-empty">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+                <small>Add items to get started</small>
+            </div>
+        </div>
+        <div class="cart-summary">
+            <div class="summary-row">
+                <span>Subtotal:</span>
+                <span id="cartSubtotal">₹0</span>
+            </div>
+            <div class="summary-row">
+                <span>Delivery:</span>
+                <span id="cartDelivery">₹50</span>
+            </div>
+            <div class="summary-row total">
+                <span>Total:</span>
+                <span id="cartTotal">₹0</span>
+            </div>
+            <button class="checkout-btn" onclick="openCheckout()" id="checkoutBtnCart">
+                Proceed to Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+    <!-- Cart Toggle Button -->
+    <button class="cart-toggle-btn" onclick="toggleCart()" id="cartToggleBtn">
+        🛒
+        <span class="cart-badge" id="cartBadge" style="display: none;">0</span>
+    </button>
+
+    <!-- Checkout Modal -->
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="checkout-content">
+            <button class="checkout-close" onclick="closeCheckout()">×</button>
+            <div class="checkout-header">
+                <h2>Complete Your Order</h2>
+            </div>
+            <form id="checkoutForm" class="checkout-body" onsubmit="submitCheckout(event)">
+                <div class="form-group-checkout">
+                    <label>Full Name *</label>
+                    <input type="text" id="checkoutName" required>
+                </div>
+                <div class="form-group-checkout">
+                    <label>Email Address *</label>
+                    <input type="email" id="checkoutEmail" required>
+                </div>
+                <div class="form-group-checkout">
+                    <label>Phone Number *</label>
+                    <input type="tel" id="checkoutPhone" placeholder="+91" required>
+                </div>
+                <div class="form-group-checkout">
+                    <label>Order Type *</label>
+                    <select id="checkoutOrderType" onchange="toggleDeliveryAddress()" required>
+                        <option value="">Select Order Type</option>
+                        <option value="Dine In">Dine In</option>
+                        <option value="Takeaway">Takeaway</option>
+                        <option value="Delivery">Delivery</option>
+                    </select>
+                </div>
+                <div class="form-group-checkout" id="deliveryAddressGroup" style="display: none;">
+                    <label>Delivery Address</label>
+                    <textarea id="checkoutAddress" rows="3" placeholder="Enter your full address"></textarea>
+                </div>
+                <div class="form-group-checkout">
+                    <label>Payment Method *</label>
+                    <div class="payment-methods">
+                        <div class="payment-option">
+                            <input type="radio" id="payment_cod" name="payment" value="Cash on Delivery" checked>
+                            <label for="payment_cod" class="payment-label">
+                                <i class="fas fa-money-bill-wave"></i><br>
+                                Cash on Delivery
+                            </label>
+                        </div>
+                        <div class="payment-option">
+                            <input type="radio" id="payment_upi" name="payment" value="UPI">
+                            <label for="payment_upi" class="payment-label">
+                                <i class="fas fa-mobile-alt"></i><br>
+                                UPI
+                            </label>
+                        </div>
+                        <div class="payment-option">
+                            <input type="radio" id="payment_card" name="payment" value="Debit/Credit Card">
+                            <label for="payment_card" class="payment-label">
+                                <i class="fas fa-credit-card"></i><br>
+                                Card
+                            </label>
+                        </div>
+                        <div class="payment-option">
+                            <input type="radio" id="payment_bank" name="payment" value="Bank Transfer">
+                            <label for="payment_bank" class="payment-label">
+                                <i class="fas fa-university"></i><br>
+                                Bank Transfer
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group-checkout">
+                    <label>Special Requests</label>
+                    <textarea id="checkoutRequests" rows="2" placeholder="Any special requests or dietary restrictions?"></textarea>
+                </div>
+                <button type="submit" class="submit-order-btn">
+                    <i class="fas fa-check-circle me-2"></i>Confirm Order
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
