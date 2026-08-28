@@ -1,4 +1,4 @@
-// ===== Koodoo Restaurant - JavaScript Functionality =====
+// ===== Gold Restaurant - JavaScript Functionality =====
 
 // Initialize on DOM load
 document.addEventListener('DOMContentLoaded', function() {
