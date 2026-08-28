@@ -1,6 +1,6 @@
-# Koodoo Family Restaurant Website
+# Gold Family Restaurant Website
 
-A professional, **premium**, and fully functional restaurant website for **Koodoo Family Restaurant** in Pudukkottai, Tamil Nadu.
+A professional, **premium**, and fully functional restaurant website for **Gold Family Restaurant** in Pudukkottai, Tamil Nadu.
 
 ## 🌟 **PREMIUM FEATURES (Latest Update)**
 
@@ -99,7 +99,7 @@ This is a complete restaurant website built with HTML5, CSS3, Bootstrap 5, and J
 ## 📁 File Structure
 
 ```
-koodu restatent/
+gold restatent/
 ├── index.html              # Premium home page
 ├── menu.html               # Menu with cart sidebar
 ├── gallery.html            # Photo gallery
@@ -171,7 +171,7 @@ Search and replace:
 - `091594 224449` - Phone number
 - `Hotel Sivalaya, 9953/2...` - Address
 - `10:00 AM - 10:30 PM` - Hours
-- `info@koodoorestaurant.com` - Email
+- `info@goldrestaurant.com` - Email
 
 ### Add Menu Items
 In `menu.html`, duplicate a menu card and update:
@@ -204,8 +204,8 @@ In `menu.html`, duplicate a menu card and update:
 ## 💾 Data Storage
 
 ### LocalStorage Keys
-- `koodooOrders` - All submitted orders
-- `koodooMessages` - Contact form messages
+- `goldOrders` - All submitted orders
+- `goldMessages` - Contact form messages
 
 ### View Stored Data
 1. Open browser DevTools (F12)
@@ -342,6 +342,6 @@ Your premium restaurant website is ready to go live!
 
 **Version:** 2.0 (Premium Edition)
 **Last Updated:** 2026-08-14
-**Created for:** Koodoo Family Restaurant, Pudukkottai
+**Created for:** Gold Family Restaurant, Pudukkottai
 
 Enjoy your premium restaurant website! 🍽️✨
